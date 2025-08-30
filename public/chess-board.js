@@ -73,7 +73,7 @@ class ChessBoard extends HTMLElement {
         this.handleMouseMove = this.handleMouseMove.bind(this);
 
         document.addEventListener('mouseup', this.handleMouseUp);
-        document.addEventListener('mousemove', this.handleMouseMove);
+        // document.addEventListener('mousemove', this.handleMouseMove); still worked with it
     }
 
     createBoardElements() {
