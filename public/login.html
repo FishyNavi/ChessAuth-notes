@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Login with chess game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-content-wrapper">
+        <div class="form-container">
+            <h1>Login with your chess game</h1>
+            <div class="move-counter">Moves: <span id="moveCount">0</span></div>
+            <chess-board></chess-board>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <div class="pattern-display">
+                    <label>Your game pattern:</label>
+                    <textarea id="notation-display" readonly></textarea>
+                </div>
+                <button type="submit">Login</button>
+                <button type="button" id="reset-board">Clear board</button>
+            </form>
+            <div id="message"></div>
+            <div id="game-status" class="game-status-message"></div>
+            <p class="link-text">
+                <a href="/register.html">Register new account</a>
+            </p>
+        </div>
+    </div>
+    <music-player></music-player>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.11.0/chess.min.js"></script>
+    <script type="module" src="./music-player.js"></script>
+    <script type="module" src="./utils.js"></script>
+    <script type="module" src="./login.js"></script>
+    <script src="./footer.js"></script>
+</body>
+</html>

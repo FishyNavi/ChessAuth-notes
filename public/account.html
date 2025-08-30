@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confirm-modal.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="main-content-wrapper">
+        <div class="form-container">
+            <h1>Account Management</h1>
+            <div id="welcome-message"></div>
+
+            <section id="account-update-section">
+                <h2>Update Your Account Details</h2>
+                <form id="account-update-form">
+                    <div class="input-group">
+                        <label for="current-username">Current Username:</label>
+                        <input type="text" id="current-username" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="new-username">New Username:</label>
+                        <input type="text" id="new-username" placeholder="Enter new username (optional)">
+                    </div>
+
+                    <div class="move-counter">New Password Moves: <span id="moveCount">0</span></div>
+                    <chess-board></chess-board>
+
+                    <div class="pattern-display">
+                        <label>New game pattern (optional):</label>
+                        <textarea id="notation-display" readonly></textarea>
+                    </div>
+
+                    <div class="flex-row centered-buttons">
+                        <button type="button" id="reset-board">Clear board</button>
+                        <button type="submit" id="update-btn">Update</button>
+                    </div>
+                </form>
+            </section>
+
+            <hr>
+
+            <section class="danger-zone">
+                <h2>Danger Zone</h2>
+                <button class="delete-btn" id="delete-account-btn">Delete Account</button>
+                <button id="logout-btn">Log out</button>
+            </section>
+            <div id="message"></div>
+            <p class="link-text">
+            <a href="/home.html">Back to Diary</a>
+        </p>
+        </div>
+        
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-dialog">
+                <header class="modal-header">
+                    <h2>Confirm Account Deletion</h2>
+                </header>
+
+                <p id="confirm-text"></p>
+
+                <section class="confirmation-options">
+                    <fieldset>
+                        <legend class="sr-only">Confirmation Checkboxes</legend>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check1" class="confirm-checkbox">
+                            <label for="confirm-check1">I understand this action is permanent and i wish to proceed with account deletion.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check2" class="confirm-checkbox">
+                            <label for="confirm-check2">I really want to do it</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check3" class="confirm-checkbox">
+                            <label for="confirm-check3">Im 100% sure about this and will not regret it.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check4" class="confirm-checkbox">
+                            <label for="confirm-check4">I acknowledge that all my notes will be deleted forever.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check5" class="confirm-checkbox">
+                            <label for="confirm-check5">I am not being forced to delete this account.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check6" class="confirm-checkbox">
+                            <label for="confirm-check6">I know that there is someone hiding in my walls</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check7" class="confirm-checkbox">
+                            <label for="confirm-check7">I accept that this decision cannot be reversed.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check8" class="confirm-checkbox">
+                            <label for="confirm-check8">I understand that my username will be available for others to use.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check9" class="confirm-checkbox">
+                            <label for="confirm-check9">I will not even try to contact support to restore my account.</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="confirm-check10" class="confirm-checkbox">
+                            <label for="confirm-check10">colon three</label>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <footer class="modal-footer">
+                    <button id="confirm-yes" class="btn btn-primary" disabled>Confirm</button>
+                    <button id="confirm-no" class="btn btn-secondary">Cancel</button>
+                </footer>
+            </div>
+        
+        </div>
+    </div>
+    <music-player></music-player>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.11.0/chess.min.js"></script>
+    <script type="module" src="./music-player.js"></script>
+    <script type="module" src="./utils.js"></script>
+    <script type="module" src="./account.js"></script>
+    <script src="./footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Chess Authentication</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register Account</h1>
+        <p>Create your unique chess pattern</p>
+        <div class="move-counter">Moves: <span id="moveCount">0</span></div>
+        <form id="register-form">
+            <chess-board></chess-board>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <input type="hidden" id="password">
+            <div class="moves-display">
+                <label>Moves:</label>
+                <textarea id="notation-display" readonly></textarea>
+            </div>
+            <button type="submit">Register</button>
+            <button type="button" id="reset-board">Reset Board</button>
+        </form>
+        <div id="message"></div>
+        <div id="game-status" class="game-status-message"></div>
+        <p class="link-text">
+            Have an account? <a href="/login.html">Login</a>
+        </p>
+    </div>
+    <music-player></music-player>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.11.0/chess.min.js"></script>
+    <script type="module" src="./music-player.js"></script>
+    <script type="module" src="./register.js"></script>
+    <script src="./footer.js"></script>
+</body>
+</html>

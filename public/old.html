@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chess Passphrase Auth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>♟ Chess Passphrase Authentication</h1>
+
+  <div class="container">
+    <div class="form-box">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Username" />
+      <textarea id="reg-passphrase" placeholder="Your chess passphrase"></textarea>
+      <button onclick="registerUser()">Register</button>
+      <p id="reg-message"></p>
+    </div>
+
+    <div class="form-box">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" />
+      <textarea id="login-passphrase" placeholder="Your chess passphrase"></textarea>
+      <button onclick="loginUser()">Login</button>
+      <p id="login-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

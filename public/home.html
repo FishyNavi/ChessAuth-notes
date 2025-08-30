@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chess Diary & Music</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-content-wrapper">
+        <div class="form-container">
+            <header class="header-bar">
+                <h1>My Chess Diary</h1>
+                <div class="header-links">
+                    <a href="/account.html" class="account-link">Account</a>
+                </div>
+            </header>
+            <div id="welcome-message"></div>
+
+            <section class="diary-container">
+                <h2>Add a New Note</h2>
+                <form id="note-form">
+                    <label for="note-content">Note:</label>
+                    <textarea id="note-content" required maxlength="1000"></textarea>
+                    <label for="note-tag-select">Tag:</label>
+                    <select id="note-tag-select">
+                        <option value="none">None</option>
+                        <option value="important">Important</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="idea">Idea</option>
+                        <option value="todo">ToDo</option>
+                    </select>
+                    <button type="submit" id="save-note-btn">Add Note</button>
+                </form>
+            </section>
+
+            <div class="notes-display-container">
+                <section class="note-controls">
+                    <input type="text" id="note-search" placeholder="Search notes..." autocomplete="off">
+                    <select id="tag-filter-select">
+                        <option value="">All tags</option>
+                        <option value="important">Important</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="idea">Idea</option>
+                        <option value="todo">ToDo</option>
+                        <option value="none">None</option>
+                    </select>
+                </section>
+                <section id="notes-list"></section>
+            </div>
+
+            <div id="message"></div>
+        </div>
+    </div>
+    <music-player></music-player>
+    <script type="module" src="./music-player.js"></script>
+    <script type="module" src="./home.js"></script>
+    <script src="./footer.js"></script>
+</body>
+</html>
