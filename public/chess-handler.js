@@ -149,7 +149,7 @@ export class ChessHandler {
                 gameStatus: this.getGameStatus(),
                 isGameOver: this.isGameOver(),
                 gameStateFlags: this.getGameStateFlags(),
-                kingPositions: this.getKingPositions(),
+                //kingPositions: this.getKingPositions(),
                 isCheck: this.chess.inCheck(),
                 lastMove: this.lastMove
             });
@@ -165,13 +165,13 @@ export class ChessHandler {
             return 'Checkmate!';
         } else if (this.chess.isStalemate()) {
             return 'Stalemate!';
-        } else if (this.chess.isThreefoldRepetition()) {
+        }/* else if (this.chess.isThreefoldRepetition()) {
             return 'Threefold repetition!';
         } else if (this.chess.isInsufficientMaterial()) {
             return 'Insufficient material!';
         } else if (this.chess.isDraw()) {
             return 'Draw!';
-        } else if (this.chess.inCheck()) {
+        } */else if (this.chess.inCheck()) {
             return 'Check!';
         } else {
             return '';
